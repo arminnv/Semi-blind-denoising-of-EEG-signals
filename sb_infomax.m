@@ -27,7 +27,7 @@ function [noise, denoised] = sb_infomax(X, refrence, alpha, n_components)
         end
     end
     
-    % Step 4: Output the estimated sources
+    % Output the estimated sources
     estimated_sources = W * X;
     noise = estimated_sources(1:n_components, :);
     estimated_sources(1:n_components, :) = 0;
